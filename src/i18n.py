@@ -36,6 +36,8 @@ def translate(text, lang=CURRENT_LANGUAGE):
 
 
 translations = {
+    # 如果是英文，则直接返回原文
+    'en': {},
     'zh': {
         'Regex': '正则',
         'is invalid': '是不合法的',
