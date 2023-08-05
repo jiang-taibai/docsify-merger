@@ -75,7 +75,7 @@ def parse_args():
                     except Exception as e:
                         logger.error(f"{t('Regex')} '{regex}' {t('is invalid')}")
                         print(f"{t('Regex')} '{regex}' {t('is invalid')}")
-                        exit(1)
+                        sys.exit(1)
 
     # 检查配置文件是否合法
     if serial_number_generate_config_file is not None:
@@ -93,7 +93,7 @@ def parse_args():
                     except Exception as e:
                         logger.error(f"{t('Config')} '{item}' {t('is invalid')}")
                         print(f"{t('Config')} '{item}' {t('is invalid')}")
-                        exit(1)
+                        sys.exit(1)
 
     # 检查输出文件路径是否合法
     if output_file_path is None:
@@ -110,7 +110,7 @@ def parse_args():
     except Exception as e:
         logger.error(f"{t('Output path')} '{output_file_path}' {t('is invalid')}")
         print(f"{t('Output path')} '{output_file_path}' {t('is invalid')}")
-        exit(1)
+        sys.exit(1)
     logger.info(f"{t('Set Output file path:')} '{output_file_path}'")
 
     # 检查输入文件夹是否合法
@@ -122,7 +122,7 @@ def parse_args():
     if not os.path.exists(docsify_path):
         logger.error(f"{t('Docsify path')} '{docsify_path}' {t('does not exist')}")
         print(f"{t('Docsify path')} '{docsify_path}' {t('does not exist')}")
-        exit(1)
+        sys.exit(1)
     logger.info(f"{t('Set Docsify path:')} '{docsify_path}'")
 
     # 检查首页是否存在
@@ -134,7 +134,7 @@ def parse_args():
     if not os.path.exists(homepage):
         logger.error(f"{t('Homepage')} '{homepage}' {t('does not exist')}")
         print(f"{t('Homepage')} '{homepage}' {t('does not exist')}")
-        exit(1)
+        sys.exit(1)
     logger.info(f"{t('Set Homepage:')} '{homepage}'")
 
     # 检查标题处理策略是否合法
@@ -142,7 +142,7 @@ def parse_args():
         if strategy not in SerialTitleStrategy.all_strategies():
             logger.error(f"{t('Title strategy')} '{strategy}' {t('is invalid')}")
             print(f"{t('Title strategy')} '{strategy}' {t('is invalid')}")
-            exit(1)
+            sys.exit(1)
 
     if handel_unserial_number_title_strategy is None:
         handel_unserial_number_title_strategy = 'normal'
