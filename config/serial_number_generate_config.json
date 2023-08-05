@@ -1,0 +1,50 @@
+[
+  {
+    "prefix": "",
+    "suffix": ".",
+    "remove_last_suffix": false,
+    "independent": true,
+    "serial_number_type": "number",
+    "start_index": 1
+  },
+  {
+    "prefix": "",
+    "suffix": ".",
+    "remove_last_suffix": true,
+    "independent": false,
+    "serial_number_type": "number",
+    "start_index": 1
+  },
+  {
+    "prefix": "",
+    "suffix": ".",
+    "remove_last_suffix": true,
+    "independent": false,
+    "serial_number_type": "number",
+    "start_index": 1
+  },
+  {
+    "prefix": "",
+    "suffix": ".",
+    "remove_last_suffix": true,
+    "independent": false,
+    "serial_number_type": "number",
+    "start_index": 1
+  },
+  {
+    "prefix": "(",
+    "suffix": ")",
+    "remove_last_suffix": false,
+    "independent": true,
+    "serial_number_type": "alphabet_lower_case",
+    "start_index": 1
+  },
+  {
+    "prefix": "",
+    "suffix": ")",
+    "remove_last_suffix": false,
+    "independent": true,
+    "serial_number_type": "roman_lower_case",
+    "start_index": 1
+  }
+]
