@@ -76,6 +76,53 @@ However, in general, you may need to modify some configurations. Below are all t
 - Strategy for unprocessed titles: `-hu normal`
 - Strategy for titles greater than level six: `-hg cite`
 
+You can execute the following command to view the description of all parameters:
+
+```shell
+docsify-merger.exe -h
+```
+
+If the directory structure is as follows:
+
+```
+.
+├── docsify-merger.exe
+├── config
+│   ├── application_config.json
+│   ├── logging_config.ini
+│   ├── serial_number_generate_config.json
+│   └── serial_number_remove_config.json
+└── docs
+    ├── README.md
+    ├── _sidebar.md
+    └── md
+        ├── overview.md
+        └── programming-language
+            ├── cpp.md
+            └── python.md
+```
+
+The content of the `_sidebar.md` file is as follows:
+
+```markdown
+- [Guide]()
+- [Overview](md/overview.md)
+- Programming Language
+    - [CPP](md/programming-language/cpp.md)
+    - [Python](md/programming-language/python.md)
+```
+
+You can enter the following command in the console to run Docsify Merger (the ^ symbol represents a line break command):
+
+```shell
+./docsify-merger.exe -d ./doc -p ./README.md ^
+-r ./config/serial_number_remove_config.json ^
+-g ./config/serial_number_generate_config.json ^
+-o ./mergerd.md ^
+-hu normal ^
+-hg cite
+```
+
 ## 3. Configuration Explanation
 
 For the .exe file, you can find the configuration files in the `config` folder. If you are running `docsify-merger.py` with Python, you can directly modify the values of various parameters in the `main` function.

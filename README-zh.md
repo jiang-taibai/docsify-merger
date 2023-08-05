@@ -78,6 +78,53 @@ python docsify-merger.py
 - 未处理标题的策略: `-hu normal`
 - 大于六级标题的策略: `-hg cite`
 
+你可以执行以下命令来查看所有参数的说明
+
+```shell
+docsify-merger.exe -h
+```
+
+如果目录结构如下：
+
+```
+.
+├── docsify-merger.exe
+├── config
+│   ├── application_config.json
+│   ├── logging_config.ini
+│   ├── serial_number_generate_config.json
+│   └── serial_number_remove_config.json
+└── docs
+    ├── README.md
+    ├── _sidebar.md
+    └── md
+        ├── overview.md
+        └── programming-language
+            ├── cpp.md
+            └── python.md
+```
+
+`_sidebar.md`文件内容如下：
+
+```markdown
+- [Guide]()
+- [Overview](md/overview.md)
+- Programming Language
+    - [CPP](md/programming-language/cpp.md)
+    - [Python](md/programming-language/python.md)
+```
+
+你可以在控制台输入以下命令来运行 Docsify Merger（^符号表示断行命令）
+
+```shell
+./docsify-merger.exe -d ./doc -p ./README.md \
+-r ./config/serial_number_remove_config.json \
+-g ./config/serial_number_generate_config.json \
+-o ./mergerd.md \
+-hu normal \
+-hg cite
+```
+
 ## 3. 配置项解释
 
 对于exe文件，你可以在`config`文件夹中找到配置文件。而对于Python执行`docsify-merger.py`，你可以直接修改`main`函数中的各个参数的值。
