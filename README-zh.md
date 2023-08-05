@@ -114,15 +114,10 @@ docsify-merger.exe -h
     - [Python](md/programming-language/python.md)
 ```
 
-你可以在控制台输入以下命令来运行 Docsify Merger（^符号表示断行命令）
+你可以在控制台输入以下命令来运行 Docsify Merger
 
 ```shell
-./docsify-merger.exe -d ./doc -p ./README.md \
--r ./config/serial_number_remove_config.json \
--g ./config/serial_number_generate_config.json \
--o ./mergerd.md \
--hu normal \
--hg cite
+./docsify-merger.exe -d ./docs -p ./README.md -r ./config/serial_number_remove_config.json -g ./config/serial_number_generate_config.json -o ./mergerd.md -hu normal -hg cite
 ```
 
 ## 3. 配置项解释

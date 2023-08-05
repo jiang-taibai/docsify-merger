@@ -112,15 +112,10 @@ The content of the `_sidebar.md` file is as follows:
     - [Python](md/programming-language/python.md)
 ```
 
-You can enter the following command in the console to run Docsify Merger (the ^ symbol represents a line break command):
+You can enter the following command in the console to run Docsify Merger
 
 ```shell
-./docsify-merger.exe -d ./doc -p ./README.md ^
--r ./config/serial_number_remove_config.json ^
--g ./config/serial_number_generate_config.json ^
--o ./mergerd.md ^
--hu normal ^
--hg cite
+./docsify-merger.exe -d ./docs -p ./README.md -r ./config/serial_number_remove_config.json -g ./config/serial_number_generate_config.json -o ./mergerd.md -hu normal -hg cite
 ```
 
 ## 3. Configuration Explanation
