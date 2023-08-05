@@ -1,0 +1,4 @@
+{
+  "language": "zh",
+  "logging_config_file_path": "./config/logging_config.ini"
+}
